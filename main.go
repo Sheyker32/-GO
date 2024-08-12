@@ -17,8 +17,8 @@ var romans = map[string]int{
 }
 
 func getRezult(a, b int, operator string) (num int) {
-	if a > 10 || b > 10 {
-		panic(fmt.Errorf("Вводимое число не может превышать 10"))
+	if a > 10 || b > 10 || a < 1 || b < 1 {
+		panic(fmt.Errorf("Вводимое число не может быть меньше 1 и больше 10"))
 	}
 	switch operator {
 	case "+":
